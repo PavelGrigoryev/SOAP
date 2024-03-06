@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+    <endpoint
+            implementation="com.grigoryev.soap.service.impl.CalculatorServiceImpl"
+            name="CalculatorService"
+            url-pattern="/calculatorService" />
+    <endpoint
+            implementation="com.grigoryev.soap.service.impl.FruitServiceImpl"
+            name="FruitService"
+            url-pattern="/fruitService" />
+</endpoints>

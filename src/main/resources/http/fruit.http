@@ -1,0 +1,53 @@
+###wsdl
+GET http://localhost:8080/fruitService?wsdl
+Accept: text/xml
+
+###schema
+GET http://localhost:8080/fruitService?xsd=1
+Accept: text/xml
+
+###findAll
+POST http://localhost:8080/fruitService
+Content-Type: text/xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:web="http://impl.service.soap.grigoryev.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <web:findAll/>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+###save
+POST http://localhost:8080/fruitService
+Content-Type: text/xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:web="http://impl.service.soap.grigoryev.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <web:save>
+            <arg0>
+                <description>Mediterranean fruit</description>
+                <name>Orange</name>
+            </arg0>
+        </web:save>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+###delete
+POST http://localhost:8080/fruitService
+Content-Type: text/xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:web="http://impl.service.soap.grigoryev.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <web:delete>
+            <arg0>
+                <description>Mediterranean fruit</description>
+                <name>Orange</name>
+            </arg0>
+        </web:delete>
+    </soapenv:Body>
+</soapenv:Envelope>
